@@ -1,7 +1,7 @@
 {
   "name": "bucketpdf",
   "version": "0.1.1",
-  "description": "Library to convert HTML to PDF",
+  "description": "BucketPDF allows you to use easily sign URLs to be used with the BucketPDF service",
   "main": "lib/bucketpdf.js",
   "scripts": {
     "test": "mocha test"
