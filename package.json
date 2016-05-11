@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BucketPDF/bucketpdf-node"
+  },
   "author": "Kommit S.A.S",
   "license": "MIT",
   "devDependencies": {
