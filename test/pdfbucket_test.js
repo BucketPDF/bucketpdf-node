@@ -1,7 +1,7 @@
 var chai   = require('chai'),
     expect = chai.expect,
     assert = chai.assert,
-    Signer = require('./../lib/bucketpdf');
+    Signer = require('./../lib/pdfbucket');
 
 describe('Testing create Signer with valid parameters', function() {
   var s;
@@ -37,11 +37,11 @@ describe('Testing create Signer with valid parameters', function() {
   });
 
   it('should return a Signer object with valid parameters through environment variables', function() {
-    process.env["BUCKET_PDF_API_KEY"]    = "PIQ7T3GOM7D36R0O67Q97UM3F0I6CPB5";
-    process.env["BUCKET_PDF_API_SECRET"] = "HieMN8dvi5zfSbKvqxKccxDo3LozqOIrY59U/jrZY54=";
+    process.env["PDF_BUCKET_API_KEY"]    = "PIQ7T3GOM7D36R0O67Q97UM3F0I6CPB5";
+    process.env["PDF_BUCKET_API_SECRET"] = "HieMN8dvi5zfSbKvqxKccxDo3LozqOIrY59U/jrZY54=";
     var s = new Signer();
-    process.env["BUCKET_PDF_API_KEY"]    = "";
-    process.env["BUCKET_PDF_API_SECRET"] = "";
+    process.env["PDF_BUCKET_API_KEY"]    = "";
+    process.env["PDF_BUCKET_API_SECRET"] = "";
     assert.typeOf(s, "object");
   });
 });

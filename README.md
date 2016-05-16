@@ -1,20 +1,20 @@
-# Bucketpdf   [![Build Status](https://travis-ci.org/BucketPDF/bucketpdf-node.svg?branch=master)](https://travis-ci.org/BucketPDF/bucketpdf-node)
+# PDFBucket   [![Build Status](https://travis-ci.org/PDFBucket/pdfbucket-node.svg?branch=master)](https://travis-ci.org/PDFBucket/pdfbucket-node)
 
-This module allows you to use easily sign URLs to be used with the BucketPDF service. Automatically tested against 0.12, 4, 5 and 6 node versions.
+This module allows you to use easily sign URLs to be used with the PDFBucket service. Automatically tested against 0.12, 4, 5 and 6 node versions.
 
 ## Installation
 
 ```sh
-$ npm install bucketpdf --save
+$ npm install pdfbucket --save
 ```
 
 ## Usage
 
 To sign a URL in your code instantiate a signer object and use its `generateUrl` method.
-The new signer will use `BUCKET_PDF_API_KEY`, `BUCKET_PDF_API_SECRET`, `BUCKET_PDF_API_HOST` (default is `bucketpdf.kommit.co`) ENV vars:
+The new signer will use `PDF_BUCKET_API_KEY`, `PDF_BUCKET_API_SECRET`, `PDF_BUCKET_API_HOST` (default is `pdfbucket.kommit.co`) ENV vars:
 
 ```javascript
-var Signer = require('bucketpdf');
+var Signer = require('pdfbucket');
 var signer = new Signer();
 ```
 

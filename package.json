@@ -1,14 +1,14 @@
 {
-  "name": "bucketpdf",
+  "name": "pdfbucket",
   "version": "0.1.2",
-  "description": "BucketPDF allows you to use easily sign URLs to be used with the BucketPDF service",
-  "main": "lib/bucketpdf.js",
+  "description": "PDFBucket allows you to use easily sign URLs to be used with the PDFBucket service",
+  "main": "lib/pdfbucket.js",
   "scripts": {
     "test": "mocha test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BucketPDF/bucketpdf-node"
+    "url": "https://github.com/PDFBucket/pdfbucket-node"
   },
   "author": "Kommit S.A.S",
   "license": "MIT",
