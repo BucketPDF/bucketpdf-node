@@ -27,8 +27,10 @@ var otherSigner = new Signer({apiKey: "ABCDEFGHIJKLMNO", apiSecret: "1234567890A
 And you get the signedUrl using the generateUrl method:
 
 ```javascript
-var signedUrl = signer.generateUrl("http://example.com", "landscape", "A4");
+var signedUrl = signer.generateUrl("http://example.com", "landscape", "A4", "2px", "0.7");
 ```
 
 * Possible values for orientation: "landscape", "portrait"
 * Possible values for page size: "Letter", "A4"
+* Possible values for margin: https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Formal_syntax
+* Possible values for zoom: https://developer.mozilla.org/en-US/docs/Web/CSS/@viewport/zoom#Formal_syntax
