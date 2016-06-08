@@ -14,25 +14,25 @@ describe('Testing create Signer with valid parameters', function() {
   });
 
   it('should generate signed url passing valid parameters', function() {
-    var signedUrl = s.generateUrl("https://www.joyent.com/", "landscape", "A4");
+    var signedUrl = s.generateUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7");
     assert.isString(signedUrl);
   });
 
   it('should throws invalid uri passed in when uri is blank', function() {
     assert.throws(function() {
-      var signedUrl = s.generateUrl("    ", "landscape", "A4");
+      var signedUrl = s.generateUrl("    ", "landscape", "A4", "2px", "0.7");
     }, "Invalid uri value, must be not blank");
   });
 
   it('should throws invalid orientation passed in when orientation is neither portrait or landscape', function() {
     assert.throws(function() {
-      var signedUrl = s.generateUrl("https://www.joyent.com/", "something", "A4");
+      var signedUrl = s.generateUrl("https://www.joyent.com/", "something", "A4", "2px", "0.7");
     }, "Invalid orientation value, must be portrait or landscape");
   });
 
   it('should throws invalid pageSize passed in when pageSize is neither A4 or Letter', function() {
     assert.throws(function() {
-      var signedUrl = s.generateUrl("https://www.joyent.com/", "landscape", "something");
+      var signedUrl = s.generateUrl("https://www.joyent.com/", "landscape", "something", "2px", "0.7");
     }, "Invalid pageSize value, must be A4 or Letter");
   });
 
