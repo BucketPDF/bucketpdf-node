@@ -1,6 +1,6 @@
 # PDFBucket   [![Build Status](https://travis-ci.org/PDFBucket/pdfbucket-node.svg?branch=master)](https://travis-ci.org/PDFBucket/pdfbucket-node)
 
-This module allows you to use easily sign URLs to be used with the PDFBucket service. Automatically tested against 0.12, 4, 5 and 6 node versions.
+PDFBucket module allows you to integrate easily with the PDFBucket service. Automatically tested against 0.12, 4, 5 and 6 node versions.
 
 ## Installation
 
