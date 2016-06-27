@@ -21,7 +21,7 @@ var PDFBucket = require('pdfbucket');
 You can also set any the api params, overwriting then ENV vars like this:
 
 ```javascript
-var otherPDFBucket = new PDFBucket({apiKey: "ABCDEFGHIJKLMNO", apiSecret: "1234567890ABCDE", apiHost: "potion-api-staging.herokuapp.com"});
+var otherPDFBucket = new PDFBucket({apiKey: "ABCDEFGHIJKLMNO", apiSecret: "1234567890ABCDE", apiHost: "api.pdfbucket.co"});
 ```
 
 And you get the encryptedUrl using the generateUrl method:
