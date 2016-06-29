@@ -1,7 +1,7 @@
 {
   "name": "pdfbucket",
-  "version": "0.2.0",
-  "description": "PDFBucket allows you to use easily sign URLs to be used with the PDFBucket service",
+  "version": "0.3.2",
+  "description": "PDFBucket module allows you to integrate easily with the PDFBucket service",
   "main": "lib/pdfbucket.js",
   "scripts": {
     "test": "mocha test"
