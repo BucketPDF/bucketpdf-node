@@ -11,7 +11,7 @@ $ npm install pdfbucket --save
 ## Usage
 
 To encrypt a URL in your code instantiate a PDFBucket object and use its `generateUrl` method.
-The new pdfBucket will use `PDF_BUCKET_API_KEY`, `PDF_BUCKET_API_SECRET`, `PDF_BUCKET_API_HOST` (default is `pdfbucket.kommit.co`) ENV vars:
+The new pdfBucket will use `PDF_BUCKET_API_KEY`, `PDF_BUCKET_API_SECRET`, `PDF_BUCKET_API_HOST` (default is `api.pdfbucket.io`) ENV vars:
 
 ```javascript
 var pdfBucket = new PDFBucket();
@@ -21,7 +21,7 @@ var PDFBucket = require('pdfbucket');
 You can also set any the api params, overwriting then ENV vars like this:
 
 ```javascript
-var otherPDFBucket = new PDFBucket({apiKey: "ABCDEFGHIJKLMNO", apiSecret: "1234567890ABCDE", apiHost: "api.pdfbucket.co"});
+var otherPDFBucket = new PDFBucket({apiKey: "ABCDEFGHIJKLMNO", apiSecret: "1234567890ABCDE", apiHost: "api.example.com"});
 ```
 
 And you get the encryptedUrl using the generateUrl method:
