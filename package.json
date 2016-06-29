@@ -1,6 +1,6 @@
 {
   "name": "pdfbucket",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "PDFBucket module allows you to integrate easily with the PDFBucket service",
   "main": "lib/pdfbucket.js",
   "scripts": {
