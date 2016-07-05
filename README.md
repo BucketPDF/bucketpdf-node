@@ -14,8 +14,8 @@ To encrypt a URL in your code instantiate a PDFBucket object and use its `genera
 The new pdfBucket will use `PDF_BUCKET_API_KEY`, `PDF_BUCKET_API_SECRET`, `PDF_BUCKET_API_HOST` (default is `api.pdfbucket.io`) ENV vars:
 
 ```javascript
-var pdfBucket = new PDFBucket();
-var PDFBucket = require('pdfbucket');
+var PDFBucket = require('pdfbucket'),
+    pdfBucket = new PDFBucket();
 ```
 
 You can also set any the api params, overwriting then ENV vars like this:
