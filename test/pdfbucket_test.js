@@ -16,7 +16,11 @@ describe('Testing create PDFBucket with valid parameters', function() {
   it('should generate encrypted url passing valid parameters', function() {
     var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7");
     assert.isString(encryptedUrl);
-    console.log(encryptedUrl);
+  });
+
+  it('should generate plain url passing valid parameters', function() {
+    var plainUrl = pdfBucket.generatePlainUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7");
+    assert.isString(plainUrl);
   });
 
   it('should throws invalid uri passed in when uri is blank', function() {
@@ -51,7 +55,6 @@ describe('Testing create PDFBucket with invalid parameters', function() {
   it('PDFBucket() initialization should throws "bucket apiKey is required" if no apiKey is passed in', function() {
     assert.throws(function() {
       var pdfBucket = new PDFBucket({apiSecret: "HieMN8dvi5zfSbKvqxKccxDo3LozqOIrY59U/jrZY54="});
-      console.log(pdfBucket);
     }, "bucket apiKey is required");
   });
 
