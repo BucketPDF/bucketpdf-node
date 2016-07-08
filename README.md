@@ -32,7 +32,9 @@ var encryptedUrl = pdfBucket.generateUrl("http://example.com", "landscape", "A4"
 
 Also you can pass the plain URL to PDFBucket
 
+```javascript
 var plainUrl = pdfBucket.generatePlainUrl("http://example.com", "landscape", "A4", "2px", "0.7");
+```
 
 * Possible values for orientation: "landscape", "portrait"
 * Possible values for page size: "Letter", "A4"
