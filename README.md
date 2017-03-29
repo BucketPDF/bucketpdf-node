@@ -24,19 +24,26 @@ You can also set any the api params, overwriting then ENV vars like this:
 var otherPDFBucket = new PDFBucket({apiKey: "ABCDEFGHIJKLMNO", apiSecret: "1234567890ABCDE", apiHost: "api.example.com"});
 ```
 
-And you get the encryptedUrl using the generateUrl method:
+And you get the encryptedUrl using the generateUrl method taking into account the following order:
+(uri, orientation, page_size, margin, zoom, pagination, position, alignment, expires_in, cache)
 
 ```javascript
-var encryptedUrl = pdfBucket.generateUrl("http://example.com", "landscape", "A4", "2px", "0.7");
+var encryptedUrl = pdfBucket.generateUrl("http://example.com", "landscape", "A4", "2px", "0.7", true, "header", "center", "10");
 ```
 
 Also you can pass the plain URL to PDFBucket
 
 ```javascript
-var plainUrl = pdfBucket.generatePlainUrl("http://example.com", "landscape", "A4", "2px", "0.7");
+var plainUrl = pdfBucket.generatePlainUrl("http://example.com", "landscape", "A4", "2px", "0.7", true, "header", "center", "10");
 ```
 
-* Possible values for orientation: "landscape", "portrait"
-* Possible values for page size: "Letter", "A4"
-* Possible values for margin: https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Formal_syntax
-* Possible values for zoom: https://developer.mozilla.org/en-US/docs/Web/CSS/@viewport/zoom#Formal_syntax
+**Possible values for the different params:**
+* **orientation:** `"landscape"` or `"portrait"`
+* **page size:** `"Letter"` or `"A4"`
+* **margin:** https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Formal_syntax
+* **zoom:** https://developer.mozilla.org/en-US/docs/Web/CSS/@viewport/zoom#Formal_syntax
+* **pagination:** `true` or `false`
+* **position:** `"header"` or `"footer"`
+* **alignment:** `"left"`, `"center"` or `"right"`
+* **expires_in:** integer value in `seconds`
+* **cache:** `0` to disable cache
