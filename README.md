@@ -25,16 +25,20 @@ var otherPDFBucket = new PDFBucket({apiKey: "ABCDEFGHIJKLMNO", apiSecret: "12345
 ```
 
 And you get the encryptedUrl using the generateUrl method taking into account the following order:
-(uri, orientation, page_size, margin, zoom, pagination, position, alignment, expires_in, cache)
-
+Without pagination: (uri, orientation, page_size, margin, zoom)
 ```javascript
-var encryptedUrl = pdfBucket.generateUrl("http://example.com", "landscape", "A4", "2px", "0.7", true, "header", "center", "10");
+var encryptedUrl = pdfBucket.generateUrl("http://example.com", "landscape", "A4", "2px", "0.7");
+```
+
+With pagination: (uri, orientation, page_size, margin, zoom, expires_in, pagination, position, alignment, cache)
+```javascript
+var encryptedUrl = pdfBucket.generateUrl("http://example.com", "landscape", "A4", "2px", "0.7", "10", true, "header", "center");
 ```
 
 Also you can pass the plain URL to PDFBucket
 
 ```javascript
-var plainUrl = pdfBucket.generatePlainUrl("http://example.com", "landscape", "A4", "2px", "0.7", true, "header", "center", "10");
+var plainUrl = pdfBucket.generatePlainUrl("http://example.com", "landscape", "A4", "2px", "0.7", "10", true, "header", "center");
 ```
 
 **Possible values for the different params:**
