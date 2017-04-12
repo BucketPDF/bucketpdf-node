@@ -13,31 +13,41 @@ describe('Testing create PDFBucket with valid parameters', function() {
     assert.typeOf(pdfBucket, "object");
   });
 
-  it('should generate encrypted url passing valid parameters', function() {
-    var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7", true, "header", "center", 10, 0);
+  it('should generate encrypted url passing valid basic parameters', function() {
+    var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7");
     assert.isString(encryptedUrl);
   });
 
+  it('should generate encrypted url passing valid parameters', function() {
+    var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7", "10", true, "header", "center", 0);
+    assert.isString(encryptedUrl);
+  });
+
+  it('should generate plain url passing valid basic parameters', function() {
+    var plainUrl = pdfBucket.generatePlainUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7");
+    assert.isString(plainUrl);
+  });
+
   it('should generate plain url passing valid parameters', function() {
-    var plainUrl = pdfBucket.generatePlainUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7", true, "header", "center", "10");
+    var plainUrl = pdfBucket.generatePlainUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7", "10", true, "header", "center");
     assert.isString(plainUrl);
   });
 
   it('should throws invalid uri passed in when uri is blank', function() {
     assert.throws(function() {
-      var encryptedUrl = pdfBucket.generateUrl("    ", "landscape", "A4", "2px", "0.7", true, "header", "center", "10");
+      var encryptedUrl = pdfBucket.generateUrl("", "landscape", "A4", "2px", "0.7", "10", true, "header", "center");
     }, "Invalid uri value, must be not blank");
   });
 
   it('should throws invalid orientation passed in when orientation is neither portrait or landscape', function() {
     assert.throws(function() {
-      var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "something", "A4", "2px", "0.7", true, "header", "center", "10");
+      var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "something", "A4", "2px", "0.7", "10", true, "header", "center");
     }, "Invalid orientation value, must be portrait or landscape");
   });
 
   it('should throws invalid pageSize passed in when pageSize is neither A4 or Letter', function() {
     assert.throws(function() {
-      var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "landscape", "something", "2px", "0.7", true, "header", "center", "10");
+      var encryptedUrl = pdfBucket.generateUrl("https://www.joyent.com/", "landscape", "something", "2px", "0.7", "10", true, "header", "center");
     }, "Invalid pageSize value, must be A4 or Letter");
   });
 
